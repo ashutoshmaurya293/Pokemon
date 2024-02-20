@@ -1,0 +1,37 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+
+const Usefeath = () => {
+    const [pokemonList, setpokemonList] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    async function downloadePokemon() {
+      const response = await axios.get("https://pokeapi.co/api/v2/pokemon");
+      const pokemonResult = response.data.results;
+    //   console.log(pokemonResult);
+      const pokemonResultPromise = pokemonResult.map((pokemon) =>
+        axios.get(pokemon.url)
+      );
+      const pokemonData = await axios.all(pokemonResultPromise);
+        const res = pokemonData.map((pokeData) => {
+          const pokemon = pokeData.data;
+          return {
+            id:pokemon.id,
+            name: pokemon.name,
+            image:(pokemon.sprites.other) ? pokemon.sprites.other.dream_world.front_default:pokemon.sprites.front.shine,
+            types: pokemon.types
+          }
+          })
+          // console.log(res);
+          setpokemonList(res)
+      setIsLoading(false);
+      // console.log(pokemonData);
+    }
+    useEffect(() => {
+      downloadePokemon();
+    }, []);
+    return {
+        pokemonList
+    }
+}
+
+export default Usefeath
