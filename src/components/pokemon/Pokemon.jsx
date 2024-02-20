@@ -2,20 +2,25 @@ import React from 'react'
 import Usefeath from '../Usefeath';
 import axios from 'axios';
 import Image from '../Image/Image';
+import Loading from '../loader/Loading';
 
 const Pokemon = () => {
     
-    const {pokemonList} = Usefeath()
-    
+    const {pokemonList,isLoading} = Usefeath()
   return (
+   <>
+   {isLoading?(
+    <Loading/>
+   ):(
     <div>
-      {/* <Image img={pokemonList.Image}/> */}
-      {pokemonList.map((e)=>{;
-        return(
-          <Image key={e.id} img={e?.image} name = {e.name}/> 
-        )
-      })}
-    </div>
+    {pokemonList.map((e)=>{;
+      return(
+        <Image key={e.id} img={e?.image} name = {e.name}/> 
+      )
+    })}
+  </div>
+   )}
+   </>
   )
 }
 

@@ -5,6 +5,7 @@ const Usefeath = () => {
     const [pokemonList, setpokemonList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     async function downloadePokemon() {
+        setIsLoading(true)
       const response = await axios.get("https://pokeapi.co/api/v2/pokemon");
       const pokemonResult = response.data.results;
     //   console.log(pokemonResult);
@@ -14,11 +15,12 @@ const Usefeath = () => {
       const pokemonData = await axios.all(pokemonResultPromise);
         const res = pokemonData.map((pokeData) => {
           const pokemon = pokeData.data;
+        //   console.log(pokemon);
           return {
             id:pokemon.id,
             name: pokemon.name,
             image:(pokemon.sprites.other) ? pokemon.sprites.other.dream_world.front_default:pokemon.sprites.front.shine,
-            types: pokemon.types
+            types: pokemon.types              
           }
           })
           // console.log(res);
@@ -30,7 +32,7 @@ const Usefeath = () => {
       downloadePokemon();
     }, []);
     return {
-        pokemonList
+        pokemonList,isLoading
     }
 }
 
