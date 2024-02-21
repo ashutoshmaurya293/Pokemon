@@ -7,13 +7,13 @@ import Button from "../buttons/Button";
 
 const Pokemon = () => {
   const [url, seturl] = useState("https://pokeapi.co/api/v2/pokemon");
-  const { pokemonList, isLoading, NexrUrl } = Usefeath(url);
+  const { pokemonList, isLoading, NexrUrl,PrevUrl } = Usefeath(url);
   // console.log(url);
   function change(e){
-    console.log(NexrUrl);
   if(e=="next"){
     seturl(NexrUrl)
-    console.log(url);
+  }else if(e=="Previous"&&PrevUrl!=null){
+    seturl(PrevUrl)
   }
   }
   return (
@@ -28,7 +28,7 @@ const Pokemon = () => {
         </div>
       )}
       <div className="buttons" onClick={(e)=>change(e.target.value)}>
-        <Button button={false} value = "adsf"/>
+        <Button button={false}/>
         <Button button={true} />
       </div>
     </>

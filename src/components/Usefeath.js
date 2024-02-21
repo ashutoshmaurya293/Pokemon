@@ -5,10 +5,12 @@ const Usefeath = (url) => {
     const [pokemonList, setpokemonList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [NexrUrl, setNexrUrl] = useState()
+    const [PrevUrl, setPrevUrl] = useState()
     async function downloadePokemon() {
         setIsLoading(true)
       const response = await axios.get(url);
-      // console.log(response.data.next);
+      console.log(response.data.previous);
+setPrevUrl(response.data.previous)
       setNexrUrl(response.data.next)
       const pokemonResult = response.data.results;
       // console.log(pokemonResult);
@@ -35,7 +37,7 @@ const Usefeath = (url) => {
       downloadePokemon();
     }, [url]);
     return {
-        pokemonList,isLoading,NexrUrl
+        pokemonList,isLoading,NexrUrl,PrevUrl
     }
 }
 

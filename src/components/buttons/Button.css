@@ -17,6 +17,7 @@
     overflow: hidden;
     font-size: 15px;
     margin: 2rem 0;
+    cursor: pointer;
     &:active{
         scale: 0.7;
     }
