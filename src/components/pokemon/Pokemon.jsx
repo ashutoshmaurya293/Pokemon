@@ -23,7 +23,7 @@ const Pokemon = () => {
       ) : (
         <div className="pokemons">
           {pokemonList.map((e) => {
-            return <Image key={e.id} img={e?.image} name={e.name} />;
+            return <Image key={e.id} img={e?.image} name={e.name} id= {e.id}/>;
           })}
         </div>
       )}
