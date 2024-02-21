@@ -3,6 +3,7 @@ import Usefeath from '../Usefeath';
 import Image from '../Image/Image';
 import Loading from '../loader/Loading';
 import "./Pokemon.css"
+import Button from '../buttons/Button';
 
 const Pokemon = () => {
     
@@ -20,6 +21,10 @@ const Pokemon = () => {
     })}
   </div>
    )}
+   <div className="buttons">
+   <Button button={false}/>
+   <Button button={true}/>
+   </div>
    </>
   )
 }
