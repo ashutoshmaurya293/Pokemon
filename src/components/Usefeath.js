@@ -1,14 +1,17 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
-const Usefeath = () => {
+const Usefeath = (url) => {
     const [pokemonList, setpokemonList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [NexrUrl, setNexrUrl] = useState()
     async function downloadePokemon() {
         setIsLoading(true)
-      const response = await axios.get("https://pokeapi.co/api/v2/pokemon");
+      const response = await axios.get(url);
+      // console.log(response.data.next);
+      setNexrUrl(response.data.next)
       const pokemonResult = response.data.results;
-    //   console.log(pokemonResult);
+      // console.log(pokemonResult);
       const pokemonResultPromise = pokemonResult.map((pokemon) =>
         axios.get(pokemon.url)
       );
@@ -30,9 +33,9 @@ const Usefeath = () => {
     }
     useEffect(() => {
       downloadePokemon();
-    }, []);
+    }, [url]);
     return {
-        pokemonList,isLoading
+        pokemonList,isLoading,NexrUrl
     }
 }
 

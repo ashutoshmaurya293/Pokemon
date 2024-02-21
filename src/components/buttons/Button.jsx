@@ -1,6 +1,6 @@
 import React from "react";
 import "./Button.css";
-const Button = ({button}) => {
+const Button = (button) => {
     const Previous =<path
     clip-rule="evenodd"
     d="M12 2.25c5.385 0 9.75 4.365 9.75 9.75s-4.365 9.75-9.75 9.75-9.75-4.365-9.75-9.75S6.615 2.25 12 2.25zm-4.28 10.28a.75.75 0 010-1.06l3-3a.75.75 0 111.06 1.06l-1.72 1.72h5.69a.75.75 0 010 1.5H9.06l1.72 1.72a.75.75 0 01-1.06 1.06l-3-3z"
@@ -14,13 +14,13 @@ const Button = ({button}) => {
   return (
     <>
 {button?(
-    <button class="button">
+    <button class="button" value={"next"}>
       Next
       <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
         {pathNext}
       </svg>
     </button>):(
-         <button class="button">
+         <button class="button" value={"Previous"}>
          <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
            {Previous}
          </svg>
