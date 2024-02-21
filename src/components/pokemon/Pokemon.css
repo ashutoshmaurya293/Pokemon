@@ -1,0 +1,18 @@
+.pokemons {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  margin: 0 auto;
+}
+@media (max-width: 1400px) {
+  .pokemons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .pokemons {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

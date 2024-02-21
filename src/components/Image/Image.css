@@ -1,8 +1,8 @@
 .card {
     display: flex;
     flex-direction: column;
-    width: 230px;
-    height: 280px;
+    width: 250px;
+    height: 350px;
     max-height: 330px;
     background-color: var(--white);
     border-radius: 10px;
@@ -50,6 +50,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 1;
     line-clamp: 1;
+    text-transform: capitalize;
   }
   
   .card-des {
@@ -69,4 +70,11 @@
     height: 100%;
     width: 100%;
     object-fit: contain;
+  }
+  @media (max-width: 768px) {
+    .card{
+      width: 200px;
+      height: 280px;
+      max-height: 280px;
+    }
   }

@@ -8,9 +8,7 @@ const Image = ({ img, name }) => {
         <img src={img} alt="image" />
       </div>
       <p className="card-title">{name}</p>
-      <p className="card-des">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit
-      </p>
+     
     </div>
   );
 };
