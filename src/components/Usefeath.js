@@ -9,7 +9,7 @@ const Usefeath = (url) => {
     async function downloadePokemon() {
         setIsLoading(true)
       const response = await axios.get(url);
-      console.log(response.data.previous);
+      // console.log(response.data.previous);
 setPrevUrl(response.data.previous)
       setNexrUrl(response.data.next)
       const pokemonResult = response.data.results;

@@ -1,0 +1,61 @@
+#fullSingle {
+  height: 70vh;
+  width: 90%;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  margin: 2rem auto;
+}
+.MainImg {
+  height: 90%;
+  width: 50%;
+  /* background-color: blue; */
+  display: flex;
+}
+.more {
+  height: 100%;
+  width: 30%;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.firstImg,
+.secondImg,
+.thirdImg {
+  height: 30%;
+  width: 100%;
+  background-color: wheat;
+}
+.firstImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.secondImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.thirdImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.img {
+  height: 100%;
+  width: 70%;
+
+  /* background-color: black; */
+}
+.img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+.details {
+  height: 90%;
+  width: 50%;
+  background-color: yellow;
+}
