@@ -5,11 +5,11 @@ import SingleImage from "../singleImage/SingleImage";
 
 const Details = () => {
   const { id } = useParams();
-  const { Data } = UseSingleImage(id);
+  const { Data,isLoading } = UseSingleImage(id);
   // console.log(Data?.data);
 
   return <div>
-    <SingleImage Data = {Data}/>
+    <SingleImage Data = {Data} isLoading={isLoading}/>
   </div>;
 };
 
