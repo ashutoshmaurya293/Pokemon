@@ -12,22 +12,25 @@
   /* background-color: blue; */
   display: flex;
   align-items: center;
-  justify-content:space-evenly ;
+  /* justify-content: space-evenly; */
 }
 .more {
-  height: 100%;
+  height: 90%;
   width: 30%;
   /* background-color: blue; */
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 1rem;
+  /* border: 1px solid black; */
 }
 .firstImg,
 .secondImg,
 .thirdImg {
-  height: 30%;
-  width: 100%;
-  background-color: wheat;
+  height: 25%;
+  width: 80%;
+  background-color: rgb(165, 165, 165);
 }
 .firstImg img {
   height: 100%;
@@ -45,23 +48,25 @@
   object-fit: contain;
 }
 .img {
-  height: 80%;
-  width: 60%;
+  height: 90%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* background-color: black; */
+  /* border: 1px solid black; */
+  margin-right: 2rem;
 }
 .img img {
   height: 100%;
   width: 85%;
   object-fit: contain;
-  /* margin-bottom: 2rem; */
-  background-color: #fff;
+  background-color: rgb(165, 165, 165);
 }
 .details {
   height: 90%;
   width: 50%;
   background-color: yellow;
+}
+.border{
+  border: 2px solid black;
 }

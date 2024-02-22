@@ -11,7 +11,7 @@ const SingleImage = (Data, { isLoading }) => {
     setMainImg(firstImg);
   }, [Data]);
 
-  console.log(thirdImg);
+  console.log(Data.Data?.data);
   return (
     <>
       {isLoading ? (
@@ -20,24 +20,32 @@ const SingleImage = (Data, { isLoading }) => {
         <div id="fullSingle">
           <div className="MainImg">
             <div className="more">
-              <div className="firstImg">
+              <div
+                className={MainImg == firstImg ? "firstImg border" : "firstImg"}
+              >
                 <img
                   src={firstImg}
-                  alt="tgh"
+                  alt=""
                   onClick={() => setMainImg(firstImg)}
                 />
               </div>
-              <div className="secondImg">
+              <div
+                className={
+                  MainImg == secondImg ? "secondImg border" : "secondImg"
+                }
+              >
                 <img
                   src={secondImg}
-                  alt="gf"
+                  alt=""
                   onClick={() => setMainImg(secondImg)}
                 />
               </div>
-              <div className="thirdImg">
+              <div
+                className={MainImg == thirdImg ? "thirdImg border" : "thirdImg"}
+              >
                 <img
                   src={thirdImg}
-                  alt="dfg"
+                  alt=""
                   onClick={() => setMainImg(thirdImg)}
                 />
               </div>
