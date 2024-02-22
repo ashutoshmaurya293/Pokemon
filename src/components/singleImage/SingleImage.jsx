@@ -11,7 +11,7 @@ const SingleImage = (Data, { isLoading }) => {
     setMainImg(firstImg);
   }, [Data]);
 
-  console.log(Data.Data?.data);
+  // console.log(Data.Data?.data);
   return (
     <>
       {isLoading ? (
