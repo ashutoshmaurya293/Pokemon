@@ -6,10 +6,10 @@ import SingleImage from "../singleImage/SingleImage";
 const Details = () => {
   const { id } = useParams();
   const { Data } = UseSingleImage(id);
-  console.log(Data?.data?.sprites?.other?.home?.front_default);
+  // console.log(Data?.data);
 
   return <div>
-    <SingleImage/>
+    <SingleImage Data = {Data}/>
   </div>;
 };
 
