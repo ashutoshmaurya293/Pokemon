@@ -69,9 +69,15 @@
   height: 100%;
   width: 85%;
   object-fit: contain;
+<<<<<<< HEAD
   /* background-color: rgb(165, 165, 165); */
   margin: 0 2rem;
 
+=======
+  background-color: rgb(165, 165, 165);
+  margin: 0 2rem;
+  border: 0.2rem solid rgb(75, 71, 71);
+>>>>>>> c9d7cdbdf3506c34ecffcdd45c805fb7eb5be9c7
 }
 .details {
   height: 90%;
@@ -84,6 +90,7 @@
 .border {
   border: 2px solid black;
 }
+<<<<<<< HEAD
 .mainDetails{
   height: 80%;
   width: 90%;
@@ -95,3 +102,5 @@
 .mainDetails h3{
   font-family: Poppins;
 }
+=======
+>>>>>>> c9d7cdbdf3506c34ecffcdd45c805fb7eb5be9c7
