@@ -61,7 +61,7 @@ const SingleImage = ({ Data, isLoading }) => {
           <div className="details">
             <div className="mainDetails">
               <h2>Name - {Data?.data.species.name}</h2>
-              <h3>Type - {Data?.data.types[0].type?.name},{Data?.data.types[1].type.name}</h3>
+              <h3>Type - {Data?.data.types[0].type?.name},{Data?.data.types[1]?.type.name}</h3>
             </div>
           </div>
         </div>
