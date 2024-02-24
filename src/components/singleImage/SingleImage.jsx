@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./SingleImage.css";
 import Loading from "../loader/Loading";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-const SingleImage = (Data, { isLoading }) => {
-  let firstImg = Data?.Data?.data?.sprites?.other?.home?.front_default;
-  let secondImg = Data?.Data?.data?.sprites?.other?.dream_world?.front_default;
-  let thirdImg = Data?.Data?.data?.sprites?.other?.home?.front_shiny;
+const SingleImage = ({Data,isLoading }) => {
+  let firstImg = Data?.data?.sprites?.other?.home?.front_default;
+  let secondImg = Data?.data?.sprites?.other?.dream_world?.front_default;
+  let thirdImg = Data?.data?.sprites?.other?.home?.front_shiny;
   const [MainImg, setMainImg] = useState();
+  // console.log(Data?.data);
   useEffect(() => {
     setMainImg(firstImg);
   }, [Data]);
+  console.log(isLoading);
 
   // console.log(Data.Data?.data);
   return (
@@ -51,7 +55,7 @@ const SingleImage = (Data, { isLoading }) => {
               </div>
             </div>
             <div className="img">
-              <img src={MainImg} alt="" />
+              <LazyLoadImage src={MainImg} effect="blur" />
             </div>
           </div>
           <div className="details"></div>

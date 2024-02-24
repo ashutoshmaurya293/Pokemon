@@ -1,10 +1,12 @@
 #fullSingle {
   height: 70vh;
   width: 90%;
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   align-items: center;
   margin: 2rem auto;
+  border: 3px solid gray;
+  border-radius: 8px;
 }
 .MainImg {
   height: 90%;
@@ -36,16 +38,19 @@
   height: 100%;
   width: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
 .secondImg img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
 .thirdImg img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
 .img {
   height: 90%;
@@ -53,7 +58,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid black; */
   margin-right: 2rem;
 }
 .img img {
@@ -61,12 +65,14 @@
   width: 85%;
   object-fit: contain;
   background-color: rgb(165, 165, 165);
+  margin: 0 2rem;
+  border: 0.2rem solid rgb(75, 71, 71);
 }
 .details {
   height: 90%;
   width: 50%;
   background-color: yellow;
 }
-.border{
+.border {
   border: 2px solid black;
 }
