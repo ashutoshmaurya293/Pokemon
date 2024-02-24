@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 #fullSingle {
   height: 70vh;
   width: 90%;
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   align-items: center;
   margin: 2rem auto;
+  border: 3px solid gray;
+  border-radius: 8px;
 }
 .MainImg {
   height: 90%;
@@ -36,16 +41,19 @@
   height: 100%;
   width: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
 .secondImg img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
 .thirdImg img {
   height: 100%;
   width: 100%;
   object-fit: contain;
+  cursor: pointer;
 }
 .img {
   height: 90%;
@@ -53,20 +61,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid black; */
   margin-right: 2rem;
+  background-color: rgb(165, 165, 165);
+  border: 0.2rem solid rgb(75, 71, 71);
 }
 .img img {
   height: 100%;
   width: 85%;
   object-fit: contain;
-  background-color: rgb(165, 165, 165);
+  /* background-color: rgb(165, 165, 165); */
+  margin: 0 2rem;
+
 }
 .details {
   height: 90%;
   width: 50%;
-  background-color: yellow;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.border{
+.border {
   border: 2px solid black;
+}
+.mainDetails{
+  height: 80%;
+  width: 90%;
+  /* background-color: red; */
+}
+.mainDetails h2{
+  font-family: Poppins;
+}
+.mainDetails h3{
+  font-family: Poppins;
 }
