@@ -15,7 +15,7 @@ const SingleImage = ({ Data, isLoading }) => {
   }, [Data]);
   // console.log(isLoading);
 
-  // console.log(Data?.data.types[0].type.name);
+  // console.log(Data?.data);
   return (
     <>
       {isLoading ? (
@@ -55,17 +55,28 @@ const SingleImage = ({ Data, isLoading }) => {
               </div>
             </div>
             <div className="img">
-              <LazyLoadImage src={MainImg} effect="blur" />
+              <img src={MainImg} />
             </div>
           </div>
           <div className="details">
             <div className="mainDetails">
-              <h2>Name - <span className="color">{Data?.data.species.name}</span></h2>
-              <h3>Type - <span className="color">{Data?.data.types[0].type?.name}, {Data?.data.types[1]?.type.name}</span></h3>
+              <h2>
+                Name - <span className="color">{Data?.data.species.name}</span>
+              </h2>
+              <hr />
+              <h3>
+                Type -{" "}
+                <span className="color">
+                  {Data?.data.types[0].type?.name},{" "}
+                  {Data?.data.types[1]?.type.name}
+                </span>
+              </h3>
+              <p>
+                Weight -<span className="color">{Data?.data.weight}</span>
+              </p>
             </div>
           </div>
         </div>
-        
       )}
     </>
   );

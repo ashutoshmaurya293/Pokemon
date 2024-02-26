@@ -76,6 +76,10 @@ body {
   align-items: center;
   justify-content: center;
 }
+.details p{
+  font-size: 22px;
+  font-family: Poppins;
+}
 .border {
   border: 2px solid black;
 }
@@ -97,11 +101,11 @@ body {
 }
 @media (max-width: 1000px) {
   #fullSingle {
-    height: 75vh;
+    height: 60vh;
     width: 100%;
     display: flex;
     border: none;
-
+    margin-top: 6rem;
     flex-direction: column;
   }
   .MainImg {
@@ -109,28 +113,36 @@ body {
     width: 100%;
   }
   .img {
-    height: 90%;
+    height: 400px;
     width: 100%;
     margin-right: 0rem;
+    position: absolute;
+  }
+  .img img {
+    min-height: 100%;
+    width: 100%;
+    object-fit: contain;
   }
   .more {
-    height: 20%;
-    position: absolute;
+    height: 45%;
+    position: relative;
     width: 95%;
     flex-direction: row;
     gap: 1rem;
-    top: 43%;
+    top: 100%;
+    margin-top: 2rem;
   }
   .firstImg,
   .secondImg,
   .thirdImg {
     height: 100%;
     width: 80%;
+    object-fit: contain;
   }
   .details {
     height: 90%;
     width: 95%;
     position: relative;
-    top: 30%;
+    top: 50%;
   }
 }
