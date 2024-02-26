@@ -15,7 +15,7 @@ const UseSingleImage = (id,pokemonName) => {
     setisLoading(false)
     setData(response)
    } catch (error) {
-    console.log("something went wrong");
+    console.log("something went Wrong");
    }
   }
   useEffect(() => {
