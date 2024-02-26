@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import UseSingleImage from "../Hooks/UseSingleImage";
 import SingleImage from "../singleImage/SingleImage";
 
-const Details = () => {
+const Details = ({pokemonName}) => {
   const { id } = useParams();
-  const { Data,isLoading } = UseSingleImage(id);
+  const { Data,isLoading } = UseSingleImage(id,pokemonName);
   // console.log(Data?.data);
 
   return <div>

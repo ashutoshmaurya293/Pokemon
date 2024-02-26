@@ -65,6 +65,7 @@ const SingleImage = ({ Data, isLoading }) => {
             </div>
           </div>
         </div>
+        
       )}
     </>
   );
