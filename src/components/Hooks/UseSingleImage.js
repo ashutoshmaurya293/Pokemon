@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 const UseSingleImage = (id,pokemonName) => {
     const [Data, setData] = useState()
+    const [DataNotFound, setDataNotFound] = useState(false)
     const [isLoading, setisLoading] = useState(true)
   async function downloadePokemon() {
    try {
@@ -14,14 +15,16 @@ const UseSingleImage = (id,pokemonName) => {
     }
     setisLoading(false)
     setData(response)
+    setDataNotFound(false)
    } catch (error) {
-    console.log("something went wrong");
+    console.log("something went Wrong");
+    setDataNotFound(true)
    }
   }
   useEffect(() => {
     downloadePokemon()
   }, [id])
-  return {Data,isLoading}
+  return {Data,isLoading,DataNotFound}
 };
 
 export default UseSingleImage;
