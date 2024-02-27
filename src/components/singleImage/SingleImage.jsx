@@ -3,6 +3,7 @@ import "./SingleImage.css";
 import Loading from "../loader/Loading";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import MorePokemon from "../morePokemon/MorePokemon";
 
 const SingleImage = ({ Data, isLoading }) => {
   let firstImg = Data?.data?.sprites?.other?.home?.front_default;
@@ -21,6 +22,7 @@ const SingleImage = ({ Data, isLoading }) => {
       {isLoading ? (
         <Loading />
       ) : (
+    <>
         <div id="fullSingle">
           <div className="MainImg">
             <div className="more">
@@ -74,9 +76,14 @@ const SingleImage = ({ Data, isLoading }) => {
               <p>
                 Weight -<span className="color">{Data?.data.weight}</span>
               </p>
+              <p>
+                Height -<span className="color">{Data?.data.height}</span>
+              </p>
             </div>
           </div>
         </div>
+        <MorePokemon type = {Data?.data.types[0].type?.name}/>
+    </>
       )}
     </>
   );

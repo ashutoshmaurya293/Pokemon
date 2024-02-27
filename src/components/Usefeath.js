@@ -12,10 +12,10 @@ const Usefeath = (url) => {
       // console.log(response.data.previous);
 setPrevUrl(response.data.previous)
       setNexrUrl(response.data.next)
-      const pokemonResult = response.data.results;
+      const pokemonResult = response.data.results?(response.data.results):(response.data.pokemon);
       // console.log(pokemonResult);
       const pokemonResultPromise = pokemonResult.map((pokemon) =>
-        axios.get(pokemon.url)
+        axios.get(pokemon.url?(pokemon.url):(pokemon?.pokemon.url))
       );
       const pokemonData = await axios.all(pokemonResultPromise);
         const res = pokemonData.map((pokeData) => {
