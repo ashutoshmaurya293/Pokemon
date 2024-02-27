@@ -4,14 +4,14 @@ import UseSingleImage from "../Hooks/UseSingleImage";
 import SingleImage from "../singleImage/SingleImage";
 import PokemopnNotFound from "../PokemonNotFound/PokemopnNotFound";
 
-const Details = ({ pokemonName }) => {
+const Details = ({ pokemonName,setsearch,search }) => {
   const mainName = pokemonName?.toLowerCase();
   const { id } = useParams();
   const { Data, isLoading, DataNotFound } = UseSingleImage(id, mainName);
   return (
     <div>
       {DataNotFound ? (
-        <PokemopnNotFound />
+        <PokemopnNotFound setsearch ={setsearch} search={search}/>
       ) : (
         <SingleImage Data={Data} isLoading={isLoading} />
       )}

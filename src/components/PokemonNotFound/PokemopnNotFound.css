@@ -1,0 +1,30 @@
+/* src/components/PageNotFound.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  

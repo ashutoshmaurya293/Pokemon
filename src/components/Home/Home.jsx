@@ -9,7 +9,16 @@ const Home = () => {
   return (
     <div>
       <Input setsearch={setsearch} />
-      {(!search)? <Pokemon /> : <Details key={search} pokemonName = {search}/>}
+      {!search ? (
+        <Pokemon />
+      ) : (
+        <Details
+          key={search}
+          pokemonName={search}
+          setsearch={setsearch}
+          search={search}
+        />
+      )}
     </div>
   );
 };
