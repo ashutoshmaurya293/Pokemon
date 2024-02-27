@@ -18,7 +18,10 @@ const UseSingleImage = (id,pokemonName) => {
     setDataNotFound(false)
    } catch (error) {
     console.log("something went Wrong");
+<<<<<<< HEAD
     setDataNotFound(true)
+=======
+>>>>>>> 869f70e20f726155578e5ac0f9becf480f897952
    }
   }
   useEffect(() => {
