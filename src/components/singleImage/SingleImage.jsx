@@ -22,68 +22,73 @@ const SingleImage = ({ Data, isLoading }) => {
       {isLoading ? (
         <Loading />
       ) : (
-    <>
-        <div id="fullSingle">
-          <div className="MainImg">
-            <div className="more">
-              <div
-                className={MainImg == firstImg ? "firstImg border" : "firstImg"}
-              >
-                <img
-                  src={firstImg}
-                  alt=""
-                  onClick={() => setMainImg(firstImg)}
-                />
+        <>
+          <div id="fullSingle">
+            <div className="MainImg">
+              <div className="more">
+                <div
+                  className={
+                    MainImg == firstImg ? "firstImg border" : "firstImg"
+                  }
+                >
+                  <img
+                    src={firstImg}
+                    alt=""
+                    onClick={() => setMainImg(firstImg)}
+                  />
+                </div>
+                <div
+                  className={
+                    MainImg == secondImg ? "secondImg border" : "secondImg"
+                  }
+                >
+                  <img
+                    src={secondImg}
+                    alt=""
+                    onClick={() => setMainImg(secondImg)}
+                  />
+                </div>
+                <div
+                  className={
+                    MainImg == thirdImg ? "thirdImg border" : "thirdImg"
+                  }
+                >
+                  <img
+                    src={thirdImg}
+                    alt=""
+                    onClick={() => setMainImg(thirdImg)}
+                  />
+                </div>
               </div>
-              <div
-                className={
-                  MainImg == secondImg ? "secondImg border" : "secondImg"
-                }
-              >
-                <img
-                  src={secondImg}
-                  alt=""
-                  onClick={() => setMainImg(secondImg)}
-                />
-              </div>
-              <div
-                className={MainImg == thirdImg ? "thirdImg border" : "thirdImg"}
-              >
-                <img
-                  src={thirdImg}
-                  alt=""
-                  onClick={() => setMainImg(thirdImg)}
-                />
+              <div className="img">
+                <img src={MainImg} />
               </div>
             </div>
-            <div className="img">
-              <img src={MainImg} />
+            <div className="details">
+              <div className="mainDetails">
+                <h2>
+                  Name -{" "}
+                  <span className="color">{Data?.data.species.name}</span>
+                </h2>
+                <hr />
+                <h3>
+                  Type -{" "}
+                  <span className="color">
+                    {Data?.data.types[0].type?.name},{" "}
+                    {Data?.data.types[1]?.type.name}
+                  </span>
+                </h3>
+                <p>
+                  Weight -<span className="color">{Data?.data.weight}</span>
+                </p>
+                <p>
+                  Height -<span className="color">{Data?.data.height}</span>
+                </p>
+              </div>
             </div>
           </div>
-          <div className="details">
-            <div className="mainDetails">
-              <h2>
-                Name - <span className="color">{Data?.data.species.name}</span>
-              </h2>
-              <hr />
-              <h3>
-                Type -{" "}
-                <span className="color">
-                  {Data?.data.types[0].type?.name},{" "}
-                  {Data?.data.types[1]?.type.name}
-                </span>
-              </h3>
-              <p>
-                Weight -<span className="color">{Data?.data.weight}</span>
-              </p>
-              <p>
-                Height -<span className="color">{Data?.data.height}</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <MorePokemon type = {Data?.data.types[0].type?.name}/>
-    </>
+          <MorePokemon type={Data?.data.types[0].type?.name} />
+        </>
       )}
     </>
   );

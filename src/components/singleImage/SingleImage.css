@@ -76,7 +76,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.details p{
+.details p {
   font-size: 22px;
   font-family: Poppins;
 }
@@ -144,5 +144,8 @@ body {
     width: 95%;
     position: relative;
     top: 50%;
+  }
+  #fullSingle {
+    margin-bottom: 15rem;
   }
 }
