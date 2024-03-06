@@ -5,11 +5,11 @@
   place-items: center;
   margin: 0 auto;
 }
-.buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 @media (max-width: 1400px) {
   .pokemons {
