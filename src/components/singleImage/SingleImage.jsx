@@ -87,7 +87,7 @@ const SingleImage = ({ Data, isLoading }) => {
               </div>
             </div>
           </div>
-          <MorePokemon type={Data?.data.types[0].type?.name} />
+          <MorePokemon type={Data?.data.types[0].type?.name} key={Date.now()} />
         </>
       )}
     </>
