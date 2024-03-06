@@ -9,6 +9,11 @@ h1{
 svg{
     font-size: 22px;
     height: 22px;
+    font-weight: 800;
+}
+.similer{
+    display: flex;
+    align-items: center;
 }
 @media (max-width: 800px) {
     h1{
