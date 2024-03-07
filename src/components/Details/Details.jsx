@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import UseSingleImage from "../Hooks/UseSingleImage";
 import SingleImage from "../singleImage/SingleImage";
 import PokemopnNotFound from "../PokemonNotFound/PokemopnNotFound";
+import GoHome from "../goHome/GoHome";
 
 const Details = ({ pokemonName,setsearch,search }) => {
   const mainName = pokemonName?.toLowerCase();
@@ -10,6 +11,7 @@ const Details = ({ pokemonName,setsearch,search }) => {
   const { Data, isLoading, DataNotFound } = UseSingleImage(id, mainName);
   return (
     <div>
+      <GoHome/>
       {DataNotFound ? (
         <PokemopnNotFound setsearch ={setsearch} search={search}/>
       ) : (
