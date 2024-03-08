@@ -1,4 +1,4 @@
-.home{
+#home{
     height: 60px ;
     width: 100%;
     background-color: #1797b8;
@@ -9,7 +9,7 @@
     position: absolute;
     top: 0;
 }
-.icon{
+#icon{
     color: #fff;
     width: 50px;
     /* background-color: red; */

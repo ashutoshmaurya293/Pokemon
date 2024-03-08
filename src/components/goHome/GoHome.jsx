@@ -5,9 +5,9 @@ import { Link, Navigate } from "react-router-dom";
 
 const GoHome = () => {
   return (
-    <div className="home">
+    <div id="home">
       <Link to={"/"}>
-        <FaArrowLeft className="icon" />
+        <FaArrowLeft id="icon" />
       </Link>
     </div>
   );
