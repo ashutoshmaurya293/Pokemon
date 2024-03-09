@@ -1,9 +1,10 @@
 .pokemons {
-  width: 80%;
+  width: 78%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
   margin: 0 auto;
+  overflow: hidden;
 }
 .buttons {
   display: flex;

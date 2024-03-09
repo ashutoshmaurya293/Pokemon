@@ -4,8 +4,10 @@ import Pokemon from "../pokemon/Pokemon";
 import Details from "../Details/Details";
 
 const Home = () => {
-  const [search, setsearch] = useState("");
-
+  const [search, setsearch] = useState();
+  if (/^\d*$/.test(search)) {
+setsearch("Number")
+  }
   return (
     <div>
       <Input setsearch={setsearch} />
