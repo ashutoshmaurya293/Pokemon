@@ -105,7 +105,7 @@ body {
     width: 100%;
     display: flex;
     border: none;
-    margin-top: 8rem;
+    margin-top: 5rem;
     flex-direction: column;
   }
   .MainImg {
